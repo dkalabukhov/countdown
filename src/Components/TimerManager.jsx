@@ -11,7 +11,7 @@ const TimerManager = () => {
 
   const addTimer = (time) => {
     const id = generateId();
-    setTimers([...timers, {time, id}]);
+    setTimers([...timers, { time, id }]);
     setAdding(false);
   }
 

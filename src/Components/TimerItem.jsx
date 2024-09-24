@@ -10,9 +10,9 @@ const Timer = ({ startTime, removeTimer, id }) => {
 
   const timerClasses = [
     'timer',
-    isRunning && 'timer-ticking',
-    isCompleted && 'timer-ringing'
-  ].join(' ');
+    isRunning ?'timer-ticking' : '',
+    isCompleted ? 'timer-ringing' : ''
+  ].filter((item) => item).join(' ');
 
   const handleDelete = () => removeTimer(id);
 
